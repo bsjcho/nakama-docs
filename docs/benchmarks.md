@@ -383,7 +383,11 @@ The client logic is also simple; each game client performs the following steps i
 
 1. Authenticates an existing user with Nakama to receive a token.
 2. Execute the server RPC function to receive an ID of an ongoing match (which is not full).
-3. Establishes a websocket connection with the realtime API.
+3. Establishes a 
+
+
+
+connection with the realtime API.
 4. Join the match with the ID received in step 2.
 5. For 180 seconds the client will loop and each half second will alternate between sending a message with opcode 1 or 2.
 
@@ -408,7 +412,7 @@ These results are the averages for each request made by the client because this 
 
 1. Authentication
 2. RPC Call
-3. Connect to Wwebsocket and
+3. Connect to websocket and
 4. Send messages through the websocket connection;
 
 the results take into account the entire set of request logic performed within each of the client sessions.
